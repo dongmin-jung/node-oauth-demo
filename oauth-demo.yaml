@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oauth-demo
+  namespace: oauth-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oauth-demo
+  template:
+    metadata:
+      name: oauth-demo
+      labels:
+        app: oauth-demo
+    spec:
+      containers:
+        - image: dongminjung/oauth-demo:19
+          imagePullPolicy: Always
+          name: oauth-demo
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oauth-demo
+  namespace: oauth-demo
+spec:
+  type: NodePort
+  selector:
+    app: oauth-demo
+  ports:
+  - name: '8080'
+    port: 8080
+    targetPort: 8080
+    nodePort: 30002
