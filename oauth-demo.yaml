@@ -15,7 +15,7 @@ spec:
         app: oauth-demo
     spec:
       containers:
-        - image: dongminjung/oauth-demo:19
+        - image: dongminjung/oauth-demo:1911
           imagePullPolicy: Always
           name: oauth-demo
           ports:
