@@ -40,9 +40,9 @@ const oauth = async ctx => {
     }
   });
   console.log(result.data);
-  const name = result.data.name;
+  const loginName = result.data.login;
 
-  ctx.response.redirect(`/welcome.html?name=${name}`);
+  ctx.response.redirect(`/welcome.html?name=${loginName}`);
 };
 
 app.use(main);
