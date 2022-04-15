@@ -11,8 +11,8 @@ Register the app on Github : https://github.com/settings/applications/new .
 ![](https://www.wangbase.com/blogimg/asset/201904/bg2019042102.jpg)
 
 - "Application name" field, enter any name you like.
-- "Homepage URL" field, enter "http://localhost:8080/ ".
-- "callback URL" field, enter "http://localhost:8080/oauth/redirect ".
+- "Homepage URL" field, enter "http://172.23.4.201:30002/ ".
+- "callback URL" field, enter "http://172.23.4.201:30002/oauth/redirect ".
 
 Once register, you will get a client ID and a client secret.
 
@@ -44,5 +44,5 @@ Now, run the server.
 $ node index.js
 ```
 
-Visit http://localhost:8080 in your browser, and click the link to login GitHub.
+Visit http://172.23.4.201:30002 in your browser, and click the link to login GitHub.
 
